@@ -1,0 +1,11 @@
+{
+    "displayName" : "PepqaApp",
+    "name" : "pepqaApp",
+    "templateName" : "pepqaApp",
+    "url" : "user.html",
+    "server": "localhost:8080",
+    
+	"context": "/PepqaAppV3.web/webresources/PepqaApp",
+    
+    "el" : "#main"
+}

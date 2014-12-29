@@ -1,0 +1,14 @@
+{
+    "displayName" : "Usuario",
+    "name" : "usuario",
+    "templateName" : "usuario",
+    "url" : "usuario.html",
+    "server": "localhost:8080",
+    "server": "localhost:8080",
+    
+    "context": "/PepqaAppV3.web/webresources/UsuarioMaster",
+    
+	
+    
+    "el" : "#main"
+}

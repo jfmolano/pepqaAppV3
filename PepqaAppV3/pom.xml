@@ -1,0 +1,16 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>co.edu.uniandes.csw.PepqaAppV3</groupId>
+  <artifactId>PepqaAppV3</artifactId>
+  <version>1.0</version>
+  <packaging>pom</packaging>
+  <name>PepqaAppV3</name>
+    <modules>
+    	  <module>../PepqaAppV3.web</module>
+    	  <module>../PepqaAppV3.api</module>
+		  <module>../PepqaAppV3.logic</module>
+		  <module>../PepqaAppV3.mock</module>	
+		  <module>../crudmaker.web</module>
+    </modules>
+</project>

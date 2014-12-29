@@ -1,0 +1,21 @@
+<script type="text/template" id="usuario">
+    <div class="form-group">
+    <form role="form" id="<%= componentId %>-usuarioForm">
+    <% if(usuario.id) {%>
+    <input type="hidden" name="id" value="<%= usuario.id %>"/>
+    <% }%>
+		<div class="form-group" >
+		<label for="name">Name</label>
+    	<input type="text" class="form-control" id="name" name="name" placeholder="Enter value" value="<%= usuario.get('name') %>"/>	
+		</div>
+		<div class="form-group" >
+		<label for="descripcion">Descripcion</label>
+    	<input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="Enter value" value="<%= usuario.get('descripcion') %>"/>	
+		</div>
+		<div class="form-group" >
+		<label for="password">Password</label>
+    	<input type="text" class="form-control" id="password" name="password" placeholder="Enter value" value="<%= usuario.get('password') %>"/>	
+		</div>
+    </form>
+    </div>
+</script> 
