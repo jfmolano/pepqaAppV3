@@ -38,10 +38,13 @@ import javax.inject.Inject;
 import javax.enterprise.inject.Default;
 
 import co.edu.uniandes.csw.PepqaAppV3.usuario.logic.api.IUsuarioLogicService;
+import co.edu.uniandes.csw.PepqaAppV3.usuario.logic.dto.UsuarioDTO;
 
 @Default
 @Stateless
 @LocalBean
 public class UsuarioLogicService extends _UsuarioLogicService implements IUsuarioLogicService {
+
+    
 
 }

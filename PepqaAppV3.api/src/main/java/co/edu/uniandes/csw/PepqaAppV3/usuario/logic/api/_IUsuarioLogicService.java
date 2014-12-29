@@ -43,5 +43,6 @@ public interface _IUsuarioLogicService {
 	public UsuarioDTO getUsuario(Long id);
 	public void deleteUsuario(Long id);
 	public void updateUsuario(UsuarioDTO detail);
+        public UsuarioDTO validar(String usuarioP, String passP);
 	
 }

@@ -72,6 +72,16 @@ public abstract class _UsuarioService {
 	public UsuarioDTO getUsuario(@PathParam("id") Long id){
 		return usuarioLogicService.getUsuario(id);
 	}
+        
+        @GET
+	@Path("validar/{usuario}/{pass}")
+	public UsuarioDTO validar(@PathParam("usuario") String usuarioP,@PathParam("pass") String passP){
+                System.out.println("- - - - - - - - - - - - - - - - -");
+                System.out.println(usuarioP);
+                System.out.println(passP);
+                System.out.println("- - - - - - - - - - - - - - - - -");
+		return usuarioLogicService.validar(usuarioP,passP);
+	}
 	
 	@PUT
 	public void updateUsuario(@PathParam("id") Long id, UsuarioDTO usuario){

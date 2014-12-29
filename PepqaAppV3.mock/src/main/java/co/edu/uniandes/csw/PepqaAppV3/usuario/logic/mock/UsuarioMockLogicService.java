@@ -33,7 +33,12 @@ import javax.enterprise.inject.Alternative;
 import javax.inject.Singleton;
 
 import co.edu.uniandes.csw.PepqaAppV3.usuario.logic.api.IUsuarioLogicService;
+import co.edu.uniandes.csw.PepqaAppV3.usuario.logic.dto.UsuarioDTO;
 @Singleton
 public class UsuarioMockLogicService extends _UsuarioMockLogicService implements IUsuarioLogicService {
+
+    public UsuarioDTO validar(String usuarioP, String passP) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 	
 }

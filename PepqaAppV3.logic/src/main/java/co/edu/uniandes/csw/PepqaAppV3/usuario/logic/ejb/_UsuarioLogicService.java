@@ -65,4 +65,20 @@ public abstract class _UsuarioLogicService implements _IUsuarioLogicService {
 	public void updateUsuario(UsuarioDTO usuario){
 	    persistance.updateUsuario(usuario); 
 	}	
+        
+        public UsuarioDTO validar(String usuarioP, String passP) {
+        List<UsuarioDTO> lista = persistance.getUsuarios();
+        UsuarioDTO resp = new UsuarioDTO();
+        resp.setDescripcion("Usuario no valido");
+        resp.setId(0L);
+        resp.setName("unvalido000");
+        resp.setPassword("000");
+        for (int i = 0; i < lista.size(); i++) {
+                UsuarioDTO act = lista.get(i);
+                if(act.getName().equals(usuarioP)&&act.getPassword().equals(passP)){
+                    resp = act;
+                }
+            }
+        return resp;
+    }
 }
