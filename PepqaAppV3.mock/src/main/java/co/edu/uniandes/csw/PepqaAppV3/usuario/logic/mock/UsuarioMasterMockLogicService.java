@@ -35,5 +35,10 @@ import javax.inject.Singleton;
 import co.edu.uniandes.csw.PepqaAppV3.usuario.master.logic.api.IUsuarioMasterLogicService;
 @Singleton
 public class UsuarioMasterMockLogicService extends _UsuarioMasterMockLogicService implements IUsuarioMasterLogicService {
+
+
+    public boolean crearRelacion(String us1, String us2) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 	
 }

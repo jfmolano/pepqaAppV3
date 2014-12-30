@@ -63,7 +63,7 @@ public class _UsuarioMasterPersistence implements _IUsuarioMasterPersistence {
         usuarioMasterDTO.setListeventosUs(getUsuarioeventosUsEntityList(usuarioId));
         return usuarioMasterDTO;
     }
-
+    
     public UsuariocontactoUsEntity createUsuariocontactoUsEntity(UsuariocontactoUsEntity entity) {
         entityManager.persist(entity);
         return entity;

@@ -80,7 +80,7 @@ public abstract class _UsuarioConverter {
 		}
 		return dtos;
 	}
-	
+        
 	public static List<UsuarioEntity> persistenceDTO2EntityList(List<UsuarioDTO> dtos){
 		List<UsuarioEntity> entities=new ArrayList<UsuarioEntity>();
 		for(UsuarioDTO dto:dtos){

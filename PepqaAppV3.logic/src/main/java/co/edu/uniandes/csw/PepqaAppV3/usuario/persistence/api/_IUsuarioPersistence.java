@@ -34,6 +34,7 @@ import java.util.List;
 
 import co.edu.uniandes.csw.PepqaAppV3.usuario.logic.dto.UsuarioDTO;
 import co.edu.uniandes.csw.PepqaAppV3.usuario.logic.dto.UsuarioPageDTO;
+import co.edu.uniandes.csw.PepqaAppV3.usuario.master.persistence.entity.UsuariocontactoUsEntity;
 
 public interface _IUsuarioPersistence {
 
@@ -43,5 +44,6 @@ public interface _IUsuarioPersistence {
 	public UsuarioDTO getUsuario(Long id);
 	public void deleteUsuario(Long id);
 	public void updateUsuario(UsuarioDTO detail);
+        public List<UsuariocontactoUsEntity> getRelaciones();
 	
 }
