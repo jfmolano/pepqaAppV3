@@ -81,4 +81,20 @@ public abstract class _UsuarioLogicService implements _IUsuarioLogicService {
             }
         return resp;
     }
+        
+        public UsuarioDTO validarUsuario(String usuarioP) {
+        List<UsuarioDTO> lista = persistance.getUsuarios();
+        UsuarioDTO resp = new UsuarioDTO();
+        resp.setDescripcion("Usuario no existe");
+        resp.setId(0L);
+        resp.setName("Usuario no existe");
+        resp.setPassword("Usuario no existe");
+        for (int i = 0; i < lista.size(); i++) {
+                UsuarioDTO act = lista.get(i);
+                if(act.getName().equals(usuarioP)){
+                    resp = act;
+                }
+            }
+        return resp;
+    }
 }
