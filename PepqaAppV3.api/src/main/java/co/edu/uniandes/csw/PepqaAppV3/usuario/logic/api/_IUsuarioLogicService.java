@@ -45,5 +45,6 @@ public interface _IUsuarioLogicService {
 	public void updateUsuario(UsuarioDTO detail);
         public UsuarioDTO validar(String usuarioP, String passP);
         public UsuarioDTO validarUsuario(String usuarioP);
+        public UsuarioDTO actualizarInfo(String usuarioP,String infoP);
 	
 }

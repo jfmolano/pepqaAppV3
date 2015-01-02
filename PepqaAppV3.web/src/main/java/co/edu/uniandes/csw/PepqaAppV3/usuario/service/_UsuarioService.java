@@ -88,6 +88,12 @@ public abstract class _UsuarioService {
 	public UsuarioDTO validarUsuario(@PathParam("usuario") String usuarioP){
 		return usuarioLogicService.validarUsuario(usuarioP);
 	}
+        
+        @GET
+	@Path("actualizarInfo/{usuario}/{info}")
+	public UsuarioDTO actualizarInfo(@PathParam("usuario") String usuarioP, @PathParam("info") String infoP){
+		return usuarioLogicService.actualizarInfo(usuarioP,infoP);
+	}
 	
 	@PUT
 	public void updateUsuario(@PathParam("id") Long id, UsuarioDTO usuario){

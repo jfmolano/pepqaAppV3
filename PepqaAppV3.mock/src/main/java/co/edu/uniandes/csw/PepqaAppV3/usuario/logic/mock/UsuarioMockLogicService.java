@@ -44,5 +44,9 @@ public class UsuarioMockLogicService extends _UsuarioMockLogicService implements
     public UsuarioDTO validarUsuario(String usuarioP) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    public UsuarioDTO actualizarInfo(String usuarioP, String infoP) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 	
 }
