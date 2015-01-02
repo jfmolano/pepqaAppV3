@@ -33,6 +33,7 @@ package co.edu.uniandes.csw.PepqaAppV3.usuario.master.service;
 import co.edu.uniandes.csw.PepqaAppV3.usuario.logic.dto.UsuarioDTO;
 import co.edu.uniandes.csw.PepqaAppV3.usuario.master.logic.api.IUsuarioMasterLogicService;
 import co.edu.uniandes.csw.PepqaAppV3.usuario.master.logic.dto.UsuarioMasterDTO;
+import java.util.List;
 import javax.inject.Inject;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -85,6 +86,12 @@ public abstract class _UsuarioMasterService {
         }
     }
 
+    @GET
+    @Path("darContactos/{us1}")
+    public List<UsuarioDTO> darContactos(@PathParam("us1") String id1) {
+        return usuarioLogicService.darContactos(id1);
+    }
+    
     @PUT
     @Path("{id}")
     public void updateUsuario(@PathParam("id") Long id, UsuarioMasterDTO usuario) {

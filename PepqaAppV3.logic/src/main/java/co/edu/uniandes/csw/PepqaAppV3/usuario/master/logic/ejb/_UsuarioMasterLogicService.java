@@ -39,6 +39,7 @@ import co.edu.uniandes.csw.PepqaAppV3.usuario.master.persistence.api.IUsuarioMas
 import co.edu.uniandes.csw.PepqaAppV3.usuario.master.persistence.entity.UsuariocontactoUsEntity;
 import co.edu.uniandes.csw.PepqaAppV3.usuario.master.persistence.entity.UsuarioeventosUsEntity;
 import co.edu.uniandes.csw.PepqaAppV3.usuario.persistence.api.IUsuarioPersistence;
+import java.util.ArrayList;
 import java.util.List;
 import javax.inject.Inject;
 
@@ -126,6 +127,29 @@ public abstract class _UsuarioMasterLogicService implements _IUsuarioMasterLogic
         usuarioMasterPersistance.createUsuariocontactoUsEntity(usuarioUsuarioEntity1);
         usuarioMasterPersistance.createUsuariocontactoUsEntity(usuarioUsuarioEntity2);}
         return norepetido;
+    }
+    
+    public List<UsuarioDTO> darContactos(String us1) {
+        List<UsuarioDTO> resp = new ArrayList<UsuarioDTO>();
+        List<UsuarioDTO> todosLosUsuarios = usuarioPersistance.getUsuarios();
+        long idUs1 = 0L;
+        for (int i = 0; i < todosLosUsuarios.size(); i++) {
+            UsuarioDTO act = todosLosUsuarios.get(i);
+            if(act.getName().equals(us1))
+            {
+                idUs1=act.getId();
+            }
+        }
+        List<UsuariocontactoUsEntity> relaciones = usuarioPersistance.getRelaciones();
+        for(int i = 0;i<relaciones.size();i++)
+        {
+            UsuariocontactoUsEntity act = relaciones.get(i);
+            if(idUs1==act.getContactoUsId())
+            {
+                resp.add(usuarioPersistance.getUsuario(act.getUsuarioId()));
+            }
+        }
+        return resp;
     }
 
     public void updateMasterUsuario(UsuarioMasterDTO usuario) {
